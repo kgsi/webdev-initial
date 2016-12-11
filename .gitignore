@@ -1,0 +1,36 @@
+.DS_Store
+config.codekit
+config.codekit3
+._*
+.Trashes
+
+# Ruby
+*.gem
+*.rbc
+.bundle
+.config
+.sass-cache
+
+# node.js
+bower_components
+node_modules
+release
+npm-debug.log
+
+# YARD artifacts
+.yardoc
+_yardoc
+
+# file
+*.mp4
+*.webm
+
+# vagrant vccw
+.vagrant
+Gemfile
+Gemfile.lock
+Rakefile
+Vagrantfile.sample
+Vagrantfile.theme-review
+provision/packaging.sh
+spec
