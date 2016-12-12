@@ -34,3 +34,7 @@ Vagrantfile.sample
 Vagrantfile.theme-review
 provision/packaging.sh
 spec
+
+# dest file
+dest/assets/css/style.css
+dest/assets/js/bundle.js
