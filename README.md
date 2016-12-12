@@ -24,4 +24,4 @@ npm scriptのみで構成した低依存のWebプロジェクトビルドツー�
 
 ## Command
 
-  $ npm run start
+    $ npm run start
