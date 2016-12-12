@@ -1,10 +1,16 @@
 {
   "use": [
     "postcss-import",
-    "postcss-simple-vars",
+    "postcss-extend",
+    "postcss-mixins",
+    "postcss-comment",
     "postcss-nested",
+    "postcss-color-function",
+    "postcss-simple-vars",
     "autoprefixer",
-    "cssnano"
+    "cssnano",
+    "cssnext",
+    "precss"
   ],
   "input": "src/css/style.css",
   "output": "dest/assets/css/style.css",

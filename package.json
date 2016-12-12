@@ -4,25 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/",
+    "start": "npm run start-serve & npm run watch",
+    "lint:js": "eslint src/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "postcss -c postcssrc.json",
-    "watch": "./node_modules/.bin/watchify src/js/main.js -o dest/assets/js/bundle.js -v -t [ babelify --presets [ es2015 react ] ]"
+    "start-serve": "browser-sync start --server dest/ --files dest/**/*",
+    "build:css": "postcss -c postcssrc.json -w --map",
+    "build:js": "./node_modules/.bin/watchify src/js/main.js -o dest/assets/js/bundle.js -v -t [ babelify --presets [ es2015 ] ]",
+    "watch:js": "watch 'npm run build:js' src/js/",
+    "watch": "npm run watch:js & npm run build:css"
   },
   "author": "kgsi",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.5",
     "browserify": "^13.1.1",
     "cssnano": "^3.8.2",
-    "eslint": "^3.12.0",
+    "cssnext": "^1.8.4",
+    "eslint": "^3.12.1",
+    "postcss-calc": "^5.3.1",
     "postcss-cli": "^2.6.0",
+    "postcss-color-function": "^2.0.1",
+    "postcss-comment": "^1.0.3",
     "postcss-easy-import": "^1.0.1",
+    "postcss-extend": "^1.0.5",
     "postcss-import": "^9.0.0",
+    "postcss-mixins": "^5.4.0",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
+    "precss": "^1.4.0",
     "watchify": "^3.7.0"
   }
 }

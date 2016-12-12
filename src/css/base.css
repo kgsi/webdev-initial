@@ -6,3 +6,30 @@ html,body{
   width: 100%;
   height: 100%;
 }
+
+body {
+  background: red;
+}
+
+/* autoprefixerのテスト */
+
+.autoprefixer {
+  display: flex;
+}
+
+/* cssnextのテスト */
+
+.cssnext {
+  background: color(red alpha(-10%));
+}
+
+/* precssのテスト */
+
+.precss {
+  @if 3 < 5 {
+    background: green;
+  }
+  @else {
+    background: blue;
+  }
+}
