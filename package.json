@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-serve": "browser-sync start --server dest/ --files dest/**/*",
     "build:css": "postcss -c postcssrc.json -w --map",
-    "build:js": "./node_modules/.bin/watchify src/js/main.js -o dest/assets/js/bundle.js -v -t [ babelify --presets [ es2015 ] ]",
+    "build:js": "watchify src/js/main.js -o dest/assets/js/bundle.js -v -t [ babelify --presets [ es2015 ] ]",
     "watch:js": "watch 'npm run build:js' src/js/",
     "watch": "npm run watch:js & npm run build:css"
   },
@@ -36,6 +36,7 @@
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
     "precss": "^1.4.0",
+    "watch": "^1.0.1",
     "watchify": "^3.7.0"
   }
 }
